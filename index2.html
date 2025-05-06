@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imagen Ampliada</title>
+    <link rel="stylesheet" href="CSS\main.css">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #000;
+            margin: 0;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-container img {
+            max-width: 90%;
+            max-height: 90%;
+            border: 2px solid #00FF00;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #00FF00;
+        }
+
+        .back-link {
+            display: block;
+            margin-top: 1em;
+            color: #00FF00;
+            text-decoration: none;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 1em;
+        }
+
+        .back-link:hover {
+            color: #00CC00;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img id="expanded-image" src="" alt="Imagen Ampliada">
+        <a href="index.html" class="back-link">Volver a la Galería</a>
+    </div>
+
+    <script>
+        // Obtener el parámetro de la URL para cargar la imagen
+        const urlParams = new URLSearchParams(window.location.search);
+        const image = urlParams.get('image');
+        if (image) {
+            document.getElementById('expanded-image').src = `IMAGE/${image}`;
+        } else {
+            document.getElementById('expanded-image').alt = 'Imagen no encontrada';
+        }
+    </script>
+</body>
+</html>

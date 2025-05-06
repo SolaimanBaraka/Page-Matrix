@@ -1,53 +1,105 @@
+```html
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matrix Theme</title>
-    <link rel="stylesheet" href="CSS\main.css">
+    <link rel="stylesheet" href="CSS/main.css">
 </head>
 <body>
-    <!-- Área Hero -->
+    <!-- Hero Area -->
     <header id="hero">
         <h1>Matrix</h1>
-        <p>Elige tu destino: píldora roja o azul</p>
+        <p>Choose your destiny: red pill or blue pill</p>
     </header>
 
-    <!-- Barra Lateral (Sidebar) -->
-    <aside id="sidebar">
-        <nav>
-            <ul>
-                <li><a href="#intro">Introducción</a></li>
-                <li><a href="#realidad">Realidad</a></li>
-                <li><a href="#simulacion">Simulación</a></li>
-                <li><a href="#codigo">Código</a></li>
-            </ul>
-        </nav>
-    </aside>
+    <!-- Hamburger Button -->
+    <button id="hamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
 
-    <!-- Contenido Principal -->
+    <!-- Sidebar (now horizontal) -->
+    <nav id="sidebar" class="hidden">
+        <ul>
+            <li><a href="#intro">Introduction</a></li>
+            <li><a href="#reality">Reality</a></li>
+            <li><a href="#simulation">Simulation</a></li>
+            <li><a href="#code">Code</a></li>
+            <li><a href="#characters">Characters</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
     <main id="content">
         <section id="intro">
-            <h2>Introducción a Matrix</h2>
-            <p>Matrix es un mundo simulado creado para mantener a los humanos bajo control mientras las máquinas dominan la realidad. ¿Qué elegirías si descubrieras la verdad?</p>
+            <h2>Introduction to Matrix</h2>
+            <p>Matrix is a simulated world created to keep humans under control while machines dominate reality. What would you choose if you discovered the truth?</p>
         </section>
-        <section id="realidad">
-            <h2>La Realidad</h2>
-            <p>Fuera de la simulación, el mundo es un lugar desolado, destruido por la guerra entre humanos y máquinas. Solo los valientes se atreven a enfrentarla.</p>
+        <section id="reality">
+            <h2>The Reality</h2>
+            <p>Outside the simulation, the world is a desolate place, destroyed by the war between humans and machines. Only the brave dare to face it.</p>
         </section>
-        <section id="simulacion">
-            <h2>La Simulación</h2>
-            <p>Dentro de Matrix, todo parece perfecto: una vida normal, rutinaria, pero falsa. La pregunta es, ¿qué tan real es lo que ves?</p>
+        <section id="simulation">
+            <h2>The Simulation</h2>
+            <p>Inside the Matrix, everything seems perfect: a normal, routine life, but fake. The question is, how real is what you see?</p>
         </section>
-        <section id="codigo">
-            <h2>El Código</h2>
-            <p>El código verde que cae como lluvia digital es el corazón de Matrix. Controla cada aspecto de la simulación, desde el clima hasta tus decisiones.</p>
+        <section id="code">
+            <h2>The Code</h2>
+            <p>The green code falling like digital rain is the heart of the Matrix. It controls every aspect of the simulation, from the weather to your decisions.</p>
+        </section>
+
+        <!-- New Section: Characters -->
+        <section id="characters">
+            <h2>Main Characters</h2>
+            <ul>
+                <li><strong>Neo:</strong> The chosen one, destined to free humanity.</li>
+                <li><strong>Trinity:</strong> A brave fighter and Neo's ally.</li>
+                <li><strong>Morpheus:</strong> The leader who believes in the prophecy of the chosen one.</li>
+                <li><strong>Agent Smith:</strong> A program seeking to eliminate Neo.</li>
+            </ul>
+        </section>
+
+        <!-- New Section: Gallery -->
+        <section id="gallery">
+            <h2>Image Gallery</h2>
+            <div class="gallery">
+                <a href="index2.html?image=neo.jpg"><img src="IMAGE/neo.jpg" alt="Neo"></a>
+                <a href="index2.html?image=trinity.jpg"><img src="IMAGE/trinity.jpg" alt="Trinity"></a>
+                <a href="index2.html?image=morpheus.jpg"><img src="IMAGE/morpheus.jpg" alt="Morpheus"></a>
+            </div>
+        </section>
+
+        <!-- New Section: Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <form action="submit_form.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
         </section>
     </main>
 
     <!-- Footer -->
     <footer id="footer">
-        <p>&copy; 2023 Matrix Theme. Inspirado en la simulación.</p>
+        <p>&copy; 2023 Matrix Theme. Inspired by the simulation.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
     </footer>
 
     <script src="script.js"></script>
